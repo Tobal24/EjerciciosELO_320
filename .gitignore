@@ -1,0 +1,36 @@
+# --- CMake ---
+# Ignora toda la carpeta de compilación donde se guardan los errores y binarios
+build/
+.cache/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+install_manifest.txt
+compile_commands.json
+
+# --- Ejecutables y Objetos ---
+# Ignora archivos compilados
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+
+# --- Visual Studio Code ---
+# Ignora configuraciones locales de la interfaz y el historial
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# --- Archivos del Sistema ---
+# Archivos temporales de Windows o macOS
+Thumbs.db
+.DS_Store
