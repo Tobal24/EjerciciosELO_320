@@ -1,26 +1,21 @@
 #include "config.h"
 
 int main(){
-#if defined(EJERCICIO_1)
-    printf("Tabla de conversion de Celsius a Fahrenheit:\n");
-    tablaCtoF();
-    printf("\nTabla de conversion de Fahrenheit a Celsius:\n");
-    tablaFtoC();
+    int len;
+    printf("ingrese la cantidad de datos: \n");
+    scanf("%d", &len);
+    float data[len];
+    printf("ingrese los datos: \n");
+    for(int i = 0; i < len; ++i){
+        scanf("%f", &data[i]);
+    }
+    stats s;
+    get_stats(&s, data, len);
+    printf("max: %f\n", s.max);
+    printf("min: %f\n", s.min);
+    printf("range: %f\n", s.range);
+    printf("mean: %f\n", s.mean);
+    printf("median: %f\n", s.median);
+    printf("desvest: %f\n", s.dev);
     return 0;
-#elif defined(EJERCICIO_2)
-    count();
-    return 0;
-#elif defined(EJERCICIO_3)
-    repeat();
-    return 0;
-#elif defined(EJERCICIO_4)
-    histograma();
-    return 0;
-#elif defined(EJERCICIO_5)
-    larger();
-    return 0;
-#elif defined(EJERCICIO_6)
-    final();
-    return 0;
-#endif
 }
